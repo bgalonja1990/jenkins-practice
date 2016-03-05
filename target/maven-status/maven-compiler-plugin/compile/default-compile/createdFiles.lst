@@ -1,4 +1,0 @@
-org\bojan\Application.class
-org\bojan\model\Item.class
-org\bojan\controller\ItemController.class
-org\bojan\repository\ItemRepository.class
