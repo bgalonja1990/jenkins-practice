@@ -1,4 +1,4 @@
 .settings/*
 .classpath
 target/**
-
+src/main/resources/static/bower_components/**
