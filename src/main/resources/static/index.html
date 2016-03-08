@@ -9,7 +9,17 @@
     <script type="text/javascript" src="app/controllers.js"></script>
     <script type="text/javascript" src="app/services.js"></script>
   </head>
-  <body>
+  <body class="container">
+    <div>
+      <ul class="nav nav-pills">
+        <li ng-show="!authenticated">
+          <a href="/#/login">Login</a>
+        </li>
+        <li ng-show="authenticated">
+          <a href="/#/logout">Logout</a>
+        </li>
+      </ul>
+    </div>
     <div ng-view></div>
   </body>
   </html>

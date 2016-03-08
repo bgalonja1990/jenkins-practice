@@ -1,5 +1,6 @@
 package org.bojan.controller;
 
+import java.security.Principal;
 import java.util.List;
 
 import org.bojan.model.Item;
@@ -17,6 +18,11 @@ public class ItemController {
 	
 	@Autowired
 	ItemRepository itemRepository;
+	
+	@RequestMapping(value="/user", method=RequestMethod.GET)
+	public Principal getUser(Principal user){
+		return user;
+	}
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public List<Item> getItems(){

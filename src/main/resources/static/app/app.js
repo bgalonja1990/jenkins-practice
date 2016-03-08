@@ -5,11 +5,16 @@ var itemApp = angular.module('itemApp',[
   'servicesModule'
 ]);
 
-itemApp.config(['$routeProvider', function($routeProvider){
-  $routeProvider.when('/app/items', {
+itemApp.config(['$routeProvider','$httpProvider', function($routeProvider, $httpProvider){
+  $routeProvider.when('/', {
     templateUrl: 'partials/items.html',
     controller: 'ItemController'
-  }).otherwise({
-    redirectTo: '/app/items'
+  }).when('/login', {
+    templateUrl:'partials/login.html',
+    controller: 'LoginController'
+  })
+  .otherwise({
+    redirectTo: '/'
   });
+  $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 }]);
