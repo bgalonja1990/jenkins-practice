@@ -2,7 +2,7 @@
 var servicesModule = angular.module('servicesModule',['ngResource']);
 
 servicesModule.factory('Item', ['$resource', function($resource){
-  return $resource('/items/:itemId',{
+  return $resource('/items/:id',{
       id:'@id'
     },
     {
